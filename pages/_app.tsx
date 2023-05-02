@@ -102,7 +102,7 @@ function MyApp({ Component, pageProps }: AppProps) {
               content="Welcome to Theon-X, your go-to source for all things Blockchain. Our website is designed to provide you with everything you need to stay up-to-date on the world of digital currencies, from real-time price updates to the latest news and articles."
             />
             <link rel="shortcut icon" href="favicon.png" />
-            <title> Great Dane</title>
+            <title> Great Flowers Staking</title>
           </Head>{" "}
           <Navbar />
           <Component {...pageProps} /> <Footer />
