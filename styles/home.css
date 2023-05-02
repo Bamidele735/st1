@@ -251,7 +251,9 @@ body {
 .galley_header span {
   font-weight: 900;
 }
-
+.stake_div{
+  padding-top: 20px;
+}
 .Whystake {
   text-align: left;
 }

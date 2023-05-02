@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
+import Staking from "/public/media/staking.png";
 export default function WhyUs() {
   return (
     <div className="container HomeBanner">
@@ -9,11 +11,14 @@ export default function WhyUs() {
           <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAgUlEQVR4nO2UOwrAIBAFvUQk3v8mSZVfE4scZ4LESlCMut0OCBa+HV6xGqMoijIKYAFOwA6YZYELWGse73z4HnmUhhmBrSYwAXcMPIBrkKYz5tagE5f2yLulLfJh0j/y4dIauZi0JBeXZnbTJ/fuD6dI0lK2aab5EY9sU0VRFJPwAs/UbERVyi05AAAAAElFTkSuQmCC" />
         </span>
       </p>
-
+<div className="stake_div"><div><Image src={Staking} alt="Metamask image" width={400} /></div>
+<div>
       <h1 className="home_h1" data-aos="fade-up" data-aos-duration="3000">
         Faster and Powerful <br/>
         <span>Great Flowers Staking.</span>
       </h1>
+</div>
+</div>
 
       <p className="banner_details">
         Our new staking system offers faster transaction speeds, lower fees, and
