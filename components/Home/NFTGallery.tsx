@@ -35,7 +35,7 @@ export default function NFTGallery() {
         </h2>
 
         <button className="gallery_btn">
-          <Link target="_blank" href="http://flower.greatdaneai.com/">
+          <Link target="_blank" href="https://flower.greatdaneai.com/">
             {" "}
             Mint Now
           </Link>

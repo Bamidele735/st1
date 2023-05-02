@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav className="bg-transparent dark:bg-white  w-full z-20 top-0 left-0 border-transparent border-transparent dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="" className="flex items-center">
+        <Link href="https://home.greatdaneai.com/" className="flex items-center">
           <Image
             src={Logo}
             className="pt-0"
@@ -40,7 +40,7 @@ export default function Navbar() {
               aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="https://www.w3.org/2000/svg"
             >
               <path
                 fillRule="evenodd"
@@ -74,7 +74,7 @@ export default function Navbar() {
             </li> */}
             <li>
               <Link
-                href="http://flower.greatdaneai.com/"
+                href="https://flower.greatdaneai.com/"
                 target="_blank"
                 className="block py-2 pl-3 pr-4 text-white rounded hover:bg-blue-900 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
               >

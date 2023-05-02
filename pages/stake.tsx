@@ -186,7 +186,7 @@ const Stake: NextPage = () => {
               <div>
                 <p>No Nfts to Stake</p>
                 <button className="mining_btn">
-                  <Link href="http://Greatdaneai.com" target="_blank">
+                  <Link href="https://Greatdaneai.com" target="_blank">
                     {" "}
                     Start Minting
                   </Link>
