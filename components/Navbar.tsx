@@ -3,16 +3,13 @@ import "flowbite";
 import Image from "next/image";
 import Logo from "../public/media/logo.png";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import {
-
-  Web3Button,
-} from "@thirdweb-dev/react";
+import { Web3Button } from "@thirdweb-dev/react";
 import Link from "next/link";
 export default function Navbar() {
   return (
     <nav className="bg-transparent dark:bg-white  w-full z-20 top-0 left-0 border-transparent border-transparent dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="https://home.greatdaneai.com/" className="flex items-center">
+        <Link href="" className="flex items-center">
           <Image
             src={Logo}
             className="pt-0"
@@ -21,7 +18,7 @@ export default function Navbar() {
             height={30}
           />
           <span className="nav_logo_name pl-4 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-          Great Flowers Staking
+            Great Flowers Staking
           </span>
         </Link>
         <div className="flex md:order-2">
@@ -40,7 +37,7 @@ export default function Navbar() {
               aria-hidden="true"
               fill="currentColor"
               viewBox="0 0 20 20"
-              xmlns="https://www.w3.org/2000/svg"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 fillRule="evenodd"

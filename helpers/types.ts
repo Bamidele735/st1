@@ -23,3 +23,4 @@ export interface PaginatedJSONResponse<T> {
   perPage: number;
   result: T;
 }
+

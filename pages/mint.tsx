@@ -3,35 +3,37 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import { nftDropContractAddress } from "../constants/contractAddresses";
 import styles from "../styles/Home.module.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Mint: NextPage = () => {
   const router = useRouter();
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.h1}>Mint An NFT!</h1>
+    <>
+      <ToastContainer />
+      <div className="conatiner mint">
+        <h1 className={styles.h1}>Mint An NFT!</h1>
 
-      <p className={styles.explain}>
-        Here is where we use our <b>NFT Drop</b> contract to allow users to mint
-        one of the NFTs that we lazy minted.
-      </p>
-      <hr className={`${styles.smallDivider} ${styles.detailPageHr}`} />
+        <hr className={`${styles.smallDivider} ${styles.detailPageHr}`} />
 
-      <Web3Button
-        // theme="dark"
-        contractAddress={nftDropContractAddress}
-        action={(contract) => contract.erc721.claim(1)}
-        onSuccess={() => {
-          alert("NFT Claimed!");
-          router.push("/stake");
-        }}
-        onError={(error) => {
-          alert(error);
-        }}
-      >
-        Claim An NFT
-      </Web3Button>
-    </div>
+        <Web3Button
+          // theme="dark"
+          contractAddress={nftDropContractAddress}
+          action={(contract) => contract.erc721.claim(1)}
+          onSuccess={() => {
+            toast.success("NFT Claimed!");
+            router.push("/stake");
+          }}
+          onError={(error) => {
+            console.log(error);
+            toast.error("Error claiming NFT. Please try again.");
+          }}
+        >
+          Claim An NFT
+        </Web3Button>
+      </div>
+    </>
   );
 };
 
