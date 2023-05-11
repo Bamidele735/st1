@@ -145,8 +145,8 @@ const Stake: NextPage = () => {
                   {stakedTokens &&
                     stakedTokens[0]?.map((stakedToken: BigNumber) => (
                       <NFTCard
-                        tokenId={stakedToken.toNumber()}
-                        key={stakedToken.toString()}
+                      key={stakedToken.toString()}
+                      // tokenId={stakedToken.toNumber()}
                       />
                     ))}
                 </div>
