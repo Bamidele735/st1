@@ -26,12 +26,12 @@ const activeChain = ChainId.Polygon;
 
 // Configure the blockchain providers and chains to use
 const { chains, provider } = configureChains(
-  [polygon], // Use the Polygon Mumbai test network
+  [polygon], // Use the Polygon  test network
   // [publicProvider()] // Use a public provider to connect to the network
   [
     // Use a JSON-RPC provider to connect to the network
     jsonRpcProvider({
-      // Check if the chain ID matches the Polygon Mumbai test network
+      // Check if the chain ID matches the Polygon  test network
       rpc: (chain) => {
         if (chain.id !== polygon.id) return null;
         return { http: `${chain.rpcUrls.default}` };
@@ -42,7 +42,7 @@ const { chains, provider } = configureChains(
 
 // Get the default wallets for the specified chains
 const { connectors } = getDefaultWallets({
-  appName: "Wagmi Tutorial", // Specify the name of the app
+  appName: "GrateDane", // Specify the name of the app
   chains, // Use the configured chains
 });
 
@@ -76,14 +76,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
   }, []);
+
   return (
-    <ThirdwebProvider
-      activeChain={activeChain}
-      authConfig={{
-        domain: "https://web3-authentication-neon.vercel.app/",
-      }}
-    >
-      <WagmiConfig client={wagmiClient}>
+    <WagmiConfig client={wagmiClient}>
+      <ThirdwebProvider activeChain={activeChain}>
         {/* Set up the RainbowKit provider for the app */}
         <RainbowKitProvider
           chains={chains}
@@ -105,10 +101,11 @@ function MyApp({ Component, pageProps }: AppProps) {
             <title> Great Flowers Staking</title>
           </Head>{" "}
           <Navbar />
-          <Component {...pageProps} /> <Footer />
+          <Component {...pageProps} />
+          <Footer />
         </RainbowKitProvider>
-      </WagmiConfig>
-    </ThirdwebProvider>
+      </ThirdwebProvider>
+    </WagmiConfig>
   );
 }
 
