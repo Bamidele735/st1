@@ -1,4 +1,5 @@
-import Moralis from "moralis";
+import Moralis from 'moralis/types';
+// import Moralis from "moralis";
 
 export default async function nftData() {
   try {
