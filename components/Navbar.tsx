@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <nav className="bg-transparent dark:bg-white  w-full z-20 top-0 left-0 border-transparent border-transparent dark:border-gray-600">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link href="" className="flex items-center">
+        <Link href="https://home.greatdaneai.com/" className="flex items-center">
           <Image
             src={Logo}
             className="pt-0"
